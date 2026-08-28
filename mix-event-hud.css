@@ -30,7 +30,7 @@
   font-size: 12px;
   line-height: 1.15;
   color: var(--rui-bone);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  flex-wrap: nowrap;
 }
 .ehud-burger {
   display: flex;
@@ -91,7 +91,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 1px;
-  min-width: 0;
+  flex-shrink: 0;
+  min-width: max-content;
   padding-left: 10px;
   margin-left: 6px;
   border-left: 1px solid color-mix(in srgb, var(--rui-metal) 70%, transparent);
