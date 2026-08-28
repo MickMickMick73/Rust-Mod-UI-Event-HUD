@@ -1,0 +1,149 @@
+/* Compact Mix Event HUD — horizontal overlay bar. Load after rust-ui.css. */
+
+.ehud-stage {
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  border: 1px solid var(--rui-metal);
+  background:
+    linear-gradient(180deg, rgba(12, 11, 10, 0.08), rgba(12, 11, 10, 0.35)),
+    url("textures/world.jpg") center / cover no-repeat;
+}
+.ehud {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100% - 28px);
+  padding: 6px 14px 6px 6px;
+  border: 1px solid var(--rui-metal);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--rui-ink) 88%, transparent);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 color-mix(in srgb, var(--rui-bone) 10%, transparent),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  font-family: var(--rui-body);
+  font-size: 12px;
+  line-height: 1.15;
+  color: var(--rui-bone);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+.ehud-burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: url("sprites/wells/off.png") center / 100% 100% no-repeat;
+  cursor: pointer;
+}
+.ehud-burger:hover {
+  background-image: url("sprites/wells/hover.png");
+}
+.ehud-burger img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 1px #000);
+}
+.ehud__dock {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.ehud-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: url("sprites/wells/off.png") center / 100% 100% no-repeat;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.ehud-tile:hover {
+  background-image: url("sprites/wells/hover.png");
+}
+.ehud-tile:active {
+  transform: translateY(1px) scale(0.96);
+}
+.ehud-tile.is-on {
+  background-image: url("sprites/wells/on.png");
+}
+.ehud-tile img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 1px #000);
+}
+.ehud__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  min-width: 0;
+  padding-left: 10px;
+  margin-left: 6px;
+  border-left: 1px solid color-mix(in srgb, var(--rui-metal) 70%, transparent);
+}
+.ehud__stats {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--rui-font);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.ehud__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.ehud__stat img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+.ehud__scrap {
+  color: var(--rui-oxide-hot);
+}
+.ehud__server {
+  margin: 0;
+  font-family: var(--rui-font);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rui-muted);
+}
+.ehud-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  margin: 0;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--rui-bone) 70%, transparent);
+  text-shadow: 0 1px 2px #000;
+}
+@media (min-width: 860px) {
+  .mix-stage {
+    grid-template-columns: 1fr;
+  }
+  .ehud-stage {
+    min-height: 280px;
+  }
+}

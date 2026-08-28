@@ -1,0 +1,44 @@
+{
+  "name": "Rust Mod UI Event HUD",
+  "version": "1.0.0",
+  "wells": {
+    "off": "sprites/wells/off.png",
+    "on": "sprites/wells/on.png",
+    "hover": "sprites/wells/hover.png",
+    "disabled": "sprites/wells/disabled.png"
+  },
+  "icons": {
+    "heli-on": "sprites/icons/heli-on.png",
+    "heli-off": "sprites/icons/heli-off.png",
+    "brad-on": "sprites/icons/brad-on.png",
+    "brad-off": "sprites/icons/brad-off.png",
+    "cargo-on": "sprites/icons/cargo-on.png",
+    "cargo-off": "sprites/icons/cargo-off.png",
+    "drop-on": "sprites/icons/drop-on.png",
+    "drop-off": "sprites/icons/drop-off.png",
+    "ch47-on": "sprites/icons/ch47-on.png",
+    "ch47-off": "sprites/icons/ch47-off.png",
+    "burger": "sprites/icons/burger.png",
+    "menu": "sprites/icons/menu.png",
+    "players": "sprites/icons/players.png",
+    "scrap": "sprites/icons/scrap.png",
+    "rp": "sprites/icons/rp.png"
+  },
+  "frames": {
+    "tray": "sprites/frames/tray.png",
+    "panel": "sprites/frames/panel.png"
+  },
+  "tiles": {
+    "off": "sprites/tiles/off.png",
+    "on": "sprites/tiles/on.png",
+    "hover": "sprites/tiles/hover.png",
+    "disabled": "sprites/tiles/disabled.png"
+  },
+  "bar": {
+    "menu": "sprites/bar/menu.png",
+    "menu-hover": "sprites/bar/menu-hover.png"
+  },
+  "textures": {
+    "world": "textures/world.jpg"
+  }
+}
